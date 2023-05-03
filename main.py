@@ -3,7 +3,7 @@ from fastapi import FastAPI, HTTPException, Path, Query
 from pydantic import BaseModel
 
 app = FastAPI()
-port = 8080
+port = int(os.getenv("PORT"))
 
 class Item(BaseModel):
     game: str
